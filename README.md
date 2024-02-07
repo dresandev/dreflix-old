@@ -5,7 +5,7 @@ Next .JS 14 is used as the main Framework, The Movie Database API is consumed, a
 
 ## Screenshots
 
-![dreflix-preview](https://github.com/dresandev/dreflix/assets/79766563/3d5a3a45-bde5-46ae-9d5b-84538fb688bd)
+![preview](https://github.com/dresandev/dreflix/assets/79766563/df2b3aa2-9808-41b5-9198-b300403c47da)
 
 ## Environment Variables
 
