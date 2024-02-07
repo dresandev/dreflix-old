@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { IMAGES_BASE_URL } from '~/constants'
-import { isFulfilled, simpleSlugify } from '~/utils'
-import { heroMovies } from '~/data/hero-movies'
+import { isFulfilled } from '~/utils'
 import {
   getMovieMainCast,
   getMovieDetails,
@@ -32,12 +31,6 @@ export async function generateMetadata({ params }: DetailsPageProps) {
       images: `${movie.backdrop_path}`,
     },
   }
-}
-
-export function generateStaticParams() {
-  return heroMovies.map(({ movieId, title }) => ({
-    slug: `${movieId}-${simpleSlugify(title)}`,
-  }))
 }
 
 export default async function DetailPage({
