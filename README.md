@@ -5,8 +5,6 @@ Next .JS 14 is used as the main Framework, The Movie Database API is consumed, a
 
 ## Screenshots
 
-![dreflix-preview](https://github.com/dresandev/dreflix/assets/79766563/3d5a3a45-bde5-46ae-9d5b-84538fb688bd)
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file.
