@@ -1,0 +1,7 @@
+export { ChevronArrow } from './ChevronArrow'
+export { CloseIcon } from './CloseIcon'
+export { DreflixLogo } from './DreflixLogo'
+export { HeartIcon } from './HeartIcon'
+export { PlayIcon } from './PlayIcon'
+export { PlusIcon } from './PlusIcon'
+export { SearchIcon } from './SearchIcon'

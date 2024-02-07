@@ -1,0 +1,23 @@
+.badges,
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.badges {
+  column-gap: 1.5rem;
+  margin-block-end: 2rem;
+  color: var(--secondary-text-color);
+}
+
+.genres {
+  gap: 0.5rem;
+}
+
+.genre {
+  transition: color 200ms ease;
+}
+
+.genre:hover {
+  color: var(--primary-text-color);
+}

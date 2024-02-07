@@ -1,0 +1,11 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-block-end: 2rem;
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+}

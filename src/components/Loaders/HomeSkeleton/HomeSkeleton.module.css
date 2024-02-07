@@ -1,0 +1,31 @@
+.container {
+  padding-inline: var(--inline-space);
+}
+
+.title {
+  inline-size: 13rem;
+  block-size: 5.4rem;
+  margin-block: 2.4rem;
+}
+
+.hero {
+  block-size: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel {
+  display: flex;
+  column-gap: var(--carousel-items-gap);
+  overflow-x: hidden;
+}
+
+.movieCard {
+  block-size: auto;
+  aspect-ratio: 2 / 3;
+}
+
+@media screen and (min-width: 880px) {
+  .hero {
+    aspect-ratio: 3 / 1;
+  }
+}

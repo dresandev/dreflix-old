@@ -1,0 +1,3 @@
+.actorCard {
+  inline-size: clamp(10rem, 9rem + 3.125vw, 15rem);
+}
