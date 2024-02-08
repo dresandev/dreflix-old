@@ -16,6 +16,7 @@ interface CarouselProps {
   itemScrollSnapStopAlways?: boolean
   showPagination?: boolean
   btnHoverVariant?: 'shadowHover' | 'scaleHover'
+  hideOverflowItems?: boolean
 }
 
 const AUTOPLAY_INTERVAL = 5000
@@ -26,7 +27,8 @@ export const Carousel: React.FC<CarouselProps> = ({
   autoPlay = false,
   itemScrollSnapStopAlways = false,
   showPagination = false,
-  btnHoverVariant = 'shadowHover'
+  btnHoverVariant = 'shadowHover',
+  hideOverflowItems = false
 }) => {
   const firstPageBtnRef = useRef<HTMLButtonElement>(null)
   const forwardBtnRef = useRef<HTMLButtonElement>(null)
@@ -81,7 +83,7 @@ export const Carousel: React.FC<CarouselProps> = ({
           forwardBtnRef={forwardBtnRef}
           btnHoverVariant={btnHoverVariant}
           showPrevButton={activePageIndex === 0}
-          showNextButton={activePageIndex === (pages.length - 1)}
+          showNextButton={activePageIndex === pages.length - 1}
           onClickPrev={prev}
           onClickNext={next}
         />
@@ -100,6 +102,8 @@ export const Carousel: React.FC<CarouselProps> = ({
                   className={clsx(
                     styles.item,
                     snapPointIndexes.has(i) && styles.itemSnapPoint,
+                    hideOverflowItems && styles.hideItem,
+                    (hideOverflowItems && activePageIndex === i) && styles.showItem,
                     itemScrollSnapStopAlways && styles.itemScrollSnapStopAlways
                   )}
                 >

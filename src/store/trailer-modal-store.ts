@@ -7,7 +7,7 @@ interface TrailerModalState {
   setTrailerKey: (trailerKey: string) => void
 }
 
-export const useTrailerModalStore = create<TrailerModalState>(set => ({
+export const useTrailerModalStore = create<TrailerModalState>()(set => ({
   trailerKey: '',
   showTrailerModal: false,
   toggleShowTrailerModal: () => set(state => ({

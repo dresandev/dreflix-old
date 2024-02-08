@@ -10,7 +10,7 @@ interface SearchResultsState {
   setSelectedResultIndex: (selectedResultIndex: number | null) => void
 }
 
-export const useSearchResultsStore = create<SearchResultsState>(set => ({
+export const useSearchResultsStore = create<SearchResultsState>()(set => ({
   searchQuery: '',
   searchResults: [],
   selectedResultIndex: null,

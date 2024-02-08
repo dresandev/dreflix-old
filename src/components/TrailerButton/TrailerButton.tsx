@@ -12,9 +12,10 @@ interface TrailerButtonProps {
 
 export const TrailerButton: React.FC<TrailerButtonProps> = ({
   trailerKey,
-  variant
+  variant,
 }) => {
-  const { toggleShowTrailerModal, setTrailerKey } = useTrailerModalStore()
+  const toggleShowTrailerModal = useTrailerModalStore(state => state.toggleShowTrailerModal)
+  const setTrailerKey = useTrailerModalStore(state => state.setTrailerKey)
 
   const handleOnClick = () => {
     setTrailerKey(trailerKey)

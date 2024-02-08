@@ -39,7 +39,7 @@ export default async function MovieListPage({
 
   return (
     <div className={styles.container}>
-      <PageGradient gradientColor='hsl(47 96% 40% / .3)' />
+      <PageGradient gradientColor='hsl(47 96% 40% / .1)' />
 
       <h1 className={styles.title}>
         {title}

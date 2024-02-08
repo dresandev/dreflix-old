@@ -10,11 +10,8 @@ export const SearchResults = ({
 }) => {
   const router = useRouter()
   const resultsRef = useRef<HTMLUListElement>(null)
-  const {
-    searchResults,
-    selectedResultIndex,
-    setSelectedResultIndex,
-  } = useSearchResultsStore()
+  const { searchResults, selectedResultIndex } = useSearchResultsStore()
+  const { setSelectedResultIndex } = useSearchResultsStore()
 
   useEffect(() => {
     setSelectedResultIndex(null)

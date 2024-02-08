@@ -37,7 +37,8 @@ export const InfiniteMovieGrid: React.FC<InfiniteMovieGridProps> = ({
               releaseDate={release_date}
               overview={overview}
               trailerKey={trailerKey}
-              posterLoading={i < 12 ? 'eager' : 'lazy'} />
+              posterLoading={i < 12 ? 'eager' : 'lazy'}
+            />
           ))
         }
       </div>

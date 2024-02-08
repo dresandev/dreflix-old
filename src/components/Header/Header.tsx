@@ -21,6 +21,7 @@ export const Header = () => (
     </Suspense>
 
     <button
+      className={styles.userMenuButton}
       type='button'
       aria-label='Open user account menu'
     >

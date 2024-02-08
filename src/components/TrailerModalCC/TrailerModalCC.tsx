@@ -5,7 +5,7 @@ import { useToggleBodyOverflow } from '~/hooks'
 import { TrailerModal } from './TrailerModal'
 
 export const TrailerModalCC = () => {
-  const { showTrailerModal } = useTrailerModalStore()
+  const showTrailerModal = useTrailerModalStore(state => state.showTrailerModal)
   useToggleBodyOverflow(showTrailerModal)
   return showTrailerModal && <TrailerModal />
 }

@@ -30,6 +30,11 @@
   margin-inline-start: auto;
 }
 
+.userMenuButton {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 880px) {
   .navMenu {
     order: initial;

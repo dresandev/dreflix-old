@@ -12,27 +12,27 @@ export const HeroCarousel = async () => {
       showPagination
       autoPlay
       itemScrollSnapStopAlways
-      itemsGap='var(--inline-space)'
+      itemsGap='clamp(1.2rem, 0.909rem + 0.777vw, 2.4rem)'
       btnHoverVariant='scaleHover'
+      hideOverflowItems
     >
       {
-        heroMovies.map((movie, i) => {
-          const loading = (i < 2 || isMobile(userAgent))
-            ? 'eager'
-            : 'lazy'
-          const fetchPriority = (i < 2)
-            ? 'high'
-            : undefined
-
-          return (
-            <HeroMovieCard
-              key={movie.movieId}
-              {...movie}
-              imageLoading={loading}
-              imageFetchPriority={fetchPriority}
-            />
-          )
-        })
+        heroMovies.map((movie, i) => (
+          <HeroMovieCard
+            key={movie.movieId}
+            {...movie}
+            imageLoading={
+              (i < 2 || isMobile(userAgent))
+                ? 'eager'
+                : 'lazy'
+            }
+            imageFetchPriority={
+              i < 2
+                ? 'high'
+                : undefined
+            }
+          />
+        ))
       }
     </Carousel>
   )

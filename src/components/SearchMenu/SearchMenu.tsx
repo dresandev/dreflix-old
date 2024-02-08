@@ -29,11 +29,8 @@ export const SearchMenu: React.FC<SearchMenuProps> = ({
     isMenuOpen: isSearchResultsOpen,
     openMenu: openSearchResults,
   } = useMenu(false)
-  const {
-    searchQuery,
-    searchResults,
-    setSearchResults,
-  } = useSearchResultsStore()
+  const { searchQuery, searchResults } = useSearchResultsStore()
+  const { setSearchResults } = useSearchResultsStore()
   const debouncedSearchQuery = useDebounce(searchQuery, DEBOUNCE_DELAY)
 
   useEffect(() => {

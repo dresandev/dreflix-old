@@ -17,12 +17,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   onFocus
 }) => {
   const router = useRouter()
-  const {
-    searchQuery,
-    selectedResultIndex,
-    setSearchQuery,
-    setSearchResults,
-  } = useSearchResultsStore()
+  const { searchQuery, selectedResultIndex } = useSearchResultsStore()
+  const { setSearchQuery, setSearchResults } = useSearchResultsStore()
   const inputRef = useAutoFocus(isMenuOpen)
 
   const handleOnSubmit = (e: FormEvent) => {

@@ -1,28 +1,22 @@
-import {
-  useEffect,
-  useLayoutEffect,
-  useRef,
-} from 'react'
+import { useEffect, useRef } from 'react'
 import { useTrailerModalStore } from '~/store/trailer-modal-store'
 import { InPortal } from '~/components/InPortal'
 import { CloseIcon } from '~/components/SVG'
 import styles from './TrailerModal.module.css'
 
 export const TrailerModal = () => {
-  const { trailerKey, toggleShowTrailerModal } = useTrailerModalStore()
   const prevScrollY = useRef(0)
-
-  useLayoutEffect(() => {
-    prevScrollY.current = window.scrollY
-  }, [])
+  const trailerKey = useTrailerModalStore(state => state.trailerKey)
+  const toggleShowTrailerModal = useTrailerModalStore(state => state.toggleShowTrailerModal)
 
   useEffect(() => {
+    prevScrollY.current = window.scrollY
+
     const handleFullscreenChange = () => {
       if (document.fullscreenElement) return
 
-      window.scrollTo({
-        top: prevScrollY.current
-      })
+      window.scrollTo({ top: prevScrollY.current })
+      window.focus()
     }
 
     document.addEventListener('fullscreenchange', handleFullscreenChange)
