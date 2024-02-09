@@ -28,7 +28,7 @@ const getGenreFromSlug = async (slug: string) => {
 export async function generateMetadata({
   params
 }: MoviesByGenrePageProps) {
-  const { id, name } = await getGenreFromSlug(params.slug)
+  const { name } = await getGenreFromSlug(params.slug)
 
   return {
     title: `Enjoy movies of the genre ${name} on Dreflix`,

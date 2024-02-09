@@ -44,9 +44,8 @@ export const InfiniteMovieGrid: React.FC<InfiniteMovieGridProps> = ({
       </div>
       <div
         ref={observerTargetRef}
-        className={styles.observerTarget}
-      ></div>
-      <div className={styles.moviesStateContainer}>
+        className={styles.statusContainer}
+      >
         {isLoading && <RingLoader />}
         {hasError && <p>Error loading movies, please try again later</p>}
       </div>

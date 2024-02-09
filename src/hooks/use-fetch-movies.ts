@@ -21,11 +21,10 @@ export const useFetchMovies = ({
   })
 
   const { observerTargetRef, isInView } = useIsInView<HTMLDivElement>({
-    rootMargin: '100%',
-    threshold: 1,
+    rootMargin: '0px 0px 700px 0px',
   })
 
-  const { movies, page, isLoading } = moviesData
+  const { page, isLoading } = moviesData
 
   useEffect(() => {
     setMoviesData(prevMoviesData => ({
@@ -44,16 +43,11 @@ export const useFetchMovies = ({
           isLoading: true,
         }))
 
-        const moviesResult = await Promise.all([
-          fetchMovies(page.toString()),
-          fetchMovies((page + 1).toString()),
-        ])
-
-        const movies = moviesResult.flatMap(movieResult => movieResult.results)
+        const { results: newMovies } = await fetchMovies(page.toString())
 
         setMoviesData(prevData => ({
           ...prevData,
-          movies: [...prevData.movies, ...movies],
+          movies: [...prevData.movies, ...newMovies],
           page: prevData.page + 2,
           hasError: false,
         }))

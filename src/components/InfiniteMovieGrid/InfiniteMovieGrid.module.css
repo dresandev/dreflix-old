@@ -6,6 +6,13 @@
   row-gap: 3rem;
 }
 
+.statusContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  block-size: 10.4rem;
+}
+
 @media only screen and (min-width: 550px) {
   .container {
     --grid-container-columns: 3;
@@ -28,13 +35,4 @@
   .container {
     --grid-container-columns: 6;
   }
-}
-
-.observerTarget {
-  block-size: 4rem;
-}
-
-.moviesStateContainer {
-  display: flex;
-  justify-content: center;
 }
