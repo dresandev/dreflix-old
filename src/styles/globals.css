@@ -36,6 +36,10 @@
   color-scheme: dark;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @media screen and (min-width: 880px) {
   :root {
     --button-padding: 1.2rem 1.6rem;
