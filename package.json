@@ -2,6 +2,10 @@
   "name": "dreflix",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=5"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +28,5 @@
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "typescript": "5.3.3"
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }
