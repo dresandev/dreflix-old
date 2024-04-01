@@ -36,7 +36,7 @@
   color-scheme: dark;
 }
 
-html {
+html:not(:has(.isFullScreen)) {
   scrollbar-gutter: stable;
 }
 

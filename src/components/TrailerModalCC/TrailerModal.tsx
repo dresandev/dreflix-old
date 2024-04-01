@@ -13,8 +13,8 @@ export const TrailerModal = () => {
     prevScrollY.current = window.scrollY
 
     const handleFullscreenChange = () => {
+      document.body.classList.toggle('isFullScreen')
       if (document.fullscreenElement) return
-
       window.scrollTo({ top: prevScrollY.current })
       modalRef.current?.focus()
     }
@@ -22,6 +22,7 @@ export const TrailerModal = () => {
     document.addEventListener('fullscreenchange', handleFullscreenChange)
 
     return () => {
+      document.body.classList.remove('isFullScreen')
       document.removeEventListener('fullscreenchange', handleFullscreenChange)
     }
   }, [])

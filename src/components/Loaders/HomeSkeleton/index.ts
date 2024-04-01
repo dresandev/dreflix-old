@@ -1,1 +1,0 @@
-export { HomeSkeleton } from './HomeSkeleton'
