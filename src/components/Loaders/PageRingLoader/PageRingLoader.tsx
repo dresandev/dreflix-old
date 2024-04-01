@@ -4,10 +4,11 @@ import styles from './PageRingLoader.module.css'
 
 export const PageRingLoader = () => {
   return (
-    <ScrollToTop>
+    <>
+      <ScrollToTop />
       <div className={styles.container}>
         <RingLoader />
       </div>
-    </ScrollToTop>
+    </>
   )
 }
