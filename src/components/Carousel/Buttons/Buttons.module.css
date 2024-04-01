@@ -4,11 +4,10 @@
 
 @media (hover: hover) {
   .btn {
-    --inline-size: clamp(4rem, 3.296rem + 1.408vw, 6rem);
+    --inline-size: clamp(40px, 32.96px + 1.408vw, 60px);
     position: absolute;
     z-index: 1;
     inset-block: 0;
-    display: none;
     justify-content: center;
     align-items: center;
     inline-size: var(--inline-size);
@@ -26,8 +25,8 @@
       hsla(0, 0%, 0%, 0.502) calc(var(--inline-size) / 2),
       hsla(0, 0%, 0%, 0.702)
     );
-    background: var(--gradient);
-    transition: background 300ms ease-in-out;
+    background-image: var(--gradient);
+    transition: background-image 300ms ease-in-out;
   }
 
   .btn.shadowHover::before {
@@ -35,12 +34,12 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: var(--gradient);
+    background-image: var(--gradient);
     opacity: 0;
-    transition: opacity 150ms ease;
+    transition: opacity 150ms;
   }
 
-  .btn.shadowHover:is(:hover)::before {
+  .btn.shadowHover:hover::before {
     opacity: 1;
   }
 
@@ -57,15 +56,16 @@
   }
 
   .btnArrowIcon {
-    inline-size: 4rem;
-    block-size: 4rem;
+    --size: 40px;
+    inline-size: var(--size);
+    block-size: var(--size);
   }
 
   .btn.scaleHover .btnArrowIcon {
     transition: transform 150ms ease;
   }
 
-  .btn.scaleHover:is(:hover) .btnArrowIcon {
+  .btn.scaleHover:hover .btnArrowIcon {
     transform: scale(1.4);
   }
 }

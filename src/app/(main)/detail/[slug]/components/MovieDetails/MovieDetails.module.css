@@ -1,30 +1,30 @@
 .detailsWrapper {
   --max-text-inline-size: 65ch;
   position: relative;
-  margin-block-end: 5rem;
+  margin-block-end: 50px;
 }
 
 .details {
   padding-inline: var(--inline-space);
-  font-size: clamp(1.6rem, 1.52rem + 0.25vw, 2rem);
+  font-size: clamp(16px, 15.2px + 0.25vw, 20px);
 }
 
 .title {
-  margin-block-end: 0.8rem;
-  font-size: clamp(2.8rem, 2.36rem + 1.375vw, 5rem);
+  margin-block-end: 8px;
+  font-size: clamp(28px, 23.6px + 1.375vw, 50px);
   line-height: normal;
 }
 
 .tagline {
   max-inline-size: var(--max-text-inline-size);
-  margin-block-end: 1.2rem;
+  margin-block-end: 12px;
   color: hsla(0, 0%, 100%, 0.7);
   font-style: italic;
 }
 
 .overview {
   max-inline-size: var(--max-text-inline-size);
-  margin-block-end: 1.2rem;
+  margin-block-end: 12px;
 }
 
 @media screen and (min-width: 967px) {
@@ -39,7 +39,7 @@
 
   .title {
     max-inline-size: calc(100vw / 2.5);
-    margin-block-end: 3rem;
+    margin-block-end: 30px;
   }
 }
 

@@ -2,15 +2,15 @@
   --grid-container-columns: 2;
   display: grid;
   grid-template-columns: repeat(var(--grid-container-columns), minmax(0, 1fr));
-  column-gap: 2rem;
-  row-gap: 3rem;
+  column-gap: 20px;
+  row-gap: 30px;
 }
 
 .statusContainer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  block-size: 10.4rem;
+  block-size: 104px;
 }
 
 @media only screen and (min-width: 550px) {

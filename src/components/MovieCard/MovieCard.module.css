@@ -8,7 +8,7 @@
   inset: 0;
   font-size: 0;
   border-radius: var(--border-radius);
-  outline-offset: 0.3rem;
+  outline-offset: 3px;
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .figcaption {
-  margin-block-start: 0.8rem;
+  margin-block-start: 8px;
   word-wrap: break-word;
 }
 
@@ -46,7 +46,7 @@
     inset: 0;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 10px;
     font-size: var(--secondary-font-size);
     background-color: var(--card-bg-color);
     opacity: 0;
@@ -75,7 +75,7 @@
   }
 
   .title {
-    margin-block-end: 1rem;
+    margin-block-end: 10px;
   }
 
   .overview {
@@ -90,7 +90,7 @@
 
   .cardActions {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     margin-block-start: auto;
     pointer-events: visible;
   }

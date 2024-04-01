@@ -23,7 +23,7 @@ const AUTOPLAY_INTERVAL = 5000
 
 export const Carousel: React.FC<CarouselProps> = ({
   children,
-  itemsGap = '2rem',
+  itemsGap = '20px',
   autoPlay = false,
   itemScrollSnapStopAlways = false,
   showPagination = false,
@@ -44,7 +44,6 @@ export const Carousel: React.FC<CarouselProps> = ({
     prev,
     next,
     goTo,
-    snapPointIndexes
   } = useSnapCarousel()
 
   useEffect(() => {
@@ -96,15 +95,17 @@ export const Carousel: React.FC<CarouselProps> = ({
         >
           {
             childrenArray.map((child, i) => {
+              const isInCurrentPage = pages.at(activePageIndex)?.includes(i)
               return (
                 <li
                   key={i}
                   className={clsx(
                     styles.item,
-                    snapPointIndexes.has(i) && styles.itemSnapPoint,
-                    hideOverflowItems && styles.hideItem,
-                    (hideOverflowItems && activePageIndex === i) && styles.showItem,
-                    itemScrollSnapStopAlways && styles.itemScrollSnapStopAlways
+                    {
+                      [styles.fadeItemTransition]: hideOverflowItems,
+                      [styles.fadeItem]: hideOverflowItems && !isInCurrentPage,
+                      [styles.itemScrollSnapStopAlways]: itemScrollSnapStopAlways,
+                    },
                   )}
                 >
                   {child}

@@ -42,13 +42,13 @@ export const createAPIMethod: CreateAPIMethod = ({
       const res = await selectedMethod(url, input, init)
 
       if (!res.ok) {
-        throw new Error(`Failed to fetch data. Status: ${res.status}`)
+        return `Failed to fetch data. Status: ${res.status}`
       }
 
       return res.json()
     } catch (error: any) {
       console.error('Error fetching data: ', error)
-      return null
+      return 'Error fetching data'
     }
   }
 }

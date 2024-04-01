@@ -10,7 +10,7 @@
   background-color: var(--secondary-bg-color);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-1rem);
+  transform: translateY(-10px);
   transition: var(--menu-transition);
 }
 

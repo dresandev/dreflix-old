@@ -38,7 +38,7 @@ export const getMovieList = async ({
     url: `${API_BASE_URL}/movie/${movieListType}`,
     init: {
       ...COMMON_FETCH_HEADERS,
-      next: { revalidate: 60 * 60 * 12 }
+      next: { revalidate: 60 * 60 * 24 }
     }
   })
 

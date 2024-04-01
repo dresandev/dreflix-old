@@ -5,7 +5,7 @@
   inset-inline-start: 0;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 20px;
   block-size: var(--header-block-size);
   padding-inline: var(--inline-space);
   background-color: var(--bg-color);
@@ -42,6 +42,6 @@
 
   .searchMenu {
     flex: 1;
-    max-inline-size: 45rem;
+    max-inline-size: 450px;
   }
 }

@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  padding-block: 5rem;
+  gap: 30px;
+  padding-block: 50px;
 }
 
 .dresanWebLink {

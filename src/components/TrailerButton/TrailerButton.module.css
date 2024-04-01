@@ -1,7 +1,7 @@
 .trailerTextButton {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 10px;
   transition: opacity 200ms ease;
 }
 
@@ -12,11 +12,11 @@
 }
 
 .playIcon {
-  padding: clamp(1rem, 1.176rem + -0.55vw, 0.12rem);
+  padding: clamp(10px, 11.76px + -0.55vw, 1.2px);
   border-radius: 50%;
   background-color: var(--primary-color);
 }
 
 .text {
-  letter-spacing: 0.6rem;
+  letter-spacing: 6px;
 }

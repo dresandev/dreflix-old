@@ -5,13 +5,13 @@
 }
 
 .badges {
-  column-gap: 1.5rem;
-  margin-block-end: 2rem;
+  column-gap: 15px;
+  margin-block-end: 20px;
   color: var(--secondary-text-color);
 }
 
 .genres {
-  gap: 0.5rem;
+  gap: 5px;
 }
 
 .genre {

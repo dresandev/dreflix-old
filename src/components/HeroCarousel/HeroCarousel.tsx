@@ -12,7 +12,7 @@ export const HeroCarousel = async () => {
       showPagination
       autoPlay
       itemScrollSnapStopAlways
-      itemsGap='clamp(1.2rem, 0.909rem + 0.777vw, 2.4rem)'
+      itemsGap='clamp(12px, 9.09px + 0.777vw, 24px)'
       btnHoverVariant='scaleHover'
       hideOverflowItems
     >
@@ -21,16 +21,8 @@ export const HeroCarousel = async () => {
           <HeroMovieCard
             key={movie.movieId}
             {...movie}
-            imageLoading={
-              (i < 2 || isMobile(userAgent))
-                ? 'eager'
-                : 'lazy'
-            }
-            imageFetchPriority={
-              i < 2
-                ? 'high'
-                : undefined
-            }
+            imageLoading={(i < 2 || isMobile(userAgent)) ? 'eager' : 'lazy'}
+            imageFetchPriority={i < 2 ? 'high' : undefined}
           />
         ))
       }

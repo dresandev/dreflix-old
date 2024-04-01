@@ -5,7 +5,7 @@
 
 .noMatchesMessage,
 .searchQuery {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 500;
-  padding-block: 3rem;
+  padding-block: 30px;
 }

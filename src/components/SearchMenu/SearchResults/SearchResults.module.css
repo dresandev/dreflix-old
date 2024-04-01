@@ -1,12 +1,12 @@
 .results {
-  block-size: calc(100vh - 13.5rem);
+  block-size: calc(100vh - 135px);
   overflow-y: auto;
 }
 
 .resultLink {
   display: block;
   padding: var(--button-padding);
-  font-size: 1.6rem;
+  font-size: 16px;
   text-transform: lowercase;
 }
 
@@ -26,7 +26,7 @@
     inset-block-start: 110%;
     inset-inline: 0;
     block-size: unset;
-    padding-block: 1rem;
+    padding-block: 10px;
     background-color: var(--secondary-bg-color);
     border-radius: var(--border-radius);
     overflow-y: unset;

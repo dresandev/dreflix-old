@@ -12,11 +12,11 @@
 }
 
 .small {
-  --size: 3.6rem;
+  --size: 36px;
 }
 
 .medium {
-  --size: clamp(4.5rem, 4.2rem + 0.938vw, 6rem);
+  --size: clamp(45px, 42px + 0.938vw, 60px);
 }
 
 @media (hover: hover) {

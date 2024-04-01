@@ -1,51 +1,51 @@
 .detailsWrapper {
-  max-inline-size: 80rem;
+  max-inline-size: 800px;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 20px;
   padding-inline: var(--inline-space);
-  margin-block-end: 5rem;
+  margin-block-end: 50px;
 }
 
 .title {
-  max-width: 60rem;
-  block-size: clamp(4.3rem, 3.523rem + 2.071vw, 7.5rem);
+  max-width: 600px;
+  block-size: clamp(43px, 35.23px + 2.071vw, 75px);
 }
 
 .overview {
-  max-inline-size: 65rem;
-  block-size: clamp(10rem, 8.786rem + 3.236vw, 15rem);
+  max-inline-size: 650px;
+  block-size: clamp(100px, 87.86px + 3.236vw, 150px);
 }
 
 .badges {
-  max-inline-size: 40rem;
-  block-size: clamp(2.4rem, 2.254rem + 0.388vw, 3rem);
+  max-inline-size: 400px;
+  block-size: clamp(24px, 22.54px + 0.388vw, 30px);
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .action {
-  --size: 4.5rem;
+  --size: 45px;
   inline-size: var(--size);
   block-size: var(--size);
 }
 
 .action:nth-child(1) {
-  inline-size: 20rem;
+  inline-size: 200px;
 }
 
 .subtitle {
-  max-inline-size: 20rem;
-  block-size: 4rem;
+  max-inline-size: 200px;
+  block-size: 40px;
   margin-inline-start: var(--inline-space);
-  margin-block-end: 1.6rem;
+  margin-block-end: 16px;
 }
 
 .actors {
@@ -58,7 +58,7 @@
 .actor {
   flex-shrink: 0;
   block-size: auto;
-  inline-size: clamp(10rem, 9rem + 3.125vw, 15rem);
+  inline-size: clamp(100px, 90px + 3.125vw, 150px);
   aspect-ratio: 1 / 1.5;
 }
 

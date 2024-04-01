@@ -1,19 +1,19 @@
 .searchBar {
   display: flex;
   align-items: center;
-  padding-inline: 1.6rem;
-  margin: 1.2rem var(--inline-space);
-  border-radius: 3rem;
-  border: 0.1rem solid var(--tertiary-bg-color);
+  padding-inline: 16px;
+  margin: 12px var(--inline-space);
+  border-radius: 30px;
+  border: 1px solid var(--tertiary-bg-color);
 }
 
 .searchBar:focus-within {
-  outline: 0.1rem solid var(--secondary-color);
+  outline: 1px solid var(--secondary-color);
 }
 
 .searchBarInput {
   flex: 1;
-  padding: 1.2rem 0.8rem;
+  padding: 12px 8px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -34,7 +34,7 @@
 }
 
 .resetInput {
-  --size: 2.4rem;
+  --size: 24px;
   display: none;
   padding-inline: 0;
   block-size: var(--size);
@@ -57,7 +57,7 @@
   }
 
   .searchBarInput {
-    padding: 0.8rem 1.2rem;
-    font-size: 1.8rem;
+    padding: 8px 12px;
+    font-size: 18px;
   }
 }

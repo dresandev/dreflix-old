@@ -5,7 +5,7 @@
 }
 
 .info {
-  padding-block-start: 1rem;
+  padding-block-start: 10px;
   font-size: var(--secondary-font-size);
 }
 

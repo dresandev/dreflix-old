@@ -5,7 +5,7 @@
 }
 
 .dropdownLinkMinInlineSize {
-  min-inline-size: 20rem;
+  min-inline-size: 200px;
 }
 
 @media (hover: hover) {

@@ -26,7 +26,9 @@ export const Buttons: React.FC<ButtonsProps> = ({
         className={clsx(
           styles.btn,
           styles[btnHoverVariant],
-          showPrevButton && styles.hideBtn
+          {
+            [styles.hideBtn]: showPrevButton
+          }
         )}
         onClick={onClickPrev}
       >
@@ -41,7 +43,9 @@ export const Buttons: React.FC<ButtonsProps> = ({
         className={clsx(
           styles.btn,
           styles[btnHoverVariant],
-          showNextButton && styles.hideBtn
+          {
+            [styles.hideBtn]: showNextButton
+          }
         )}
         onClick={onClickNext}
       >

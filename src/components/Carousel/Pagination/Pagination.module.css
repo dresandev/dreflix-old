@@ -1,16 +1,16 @@
 .paginationWrapper {
-  min-block-size: 5.2rem;
+  min-block-size: 52px;
 }
 
 .pagination {
   inline-size: max-content;
   margin-inline: auto;
-  padding-block: 0.4rem 1.6rem;
+  padding-block: 4px 16px;
 }
 
 .paginationBtn {
-  padding: 0.6rem;
-  border: 0.8rem solid var(--bg-color);
+  padding: 6px;
+  border: 8px solid var(--bg-color);
   background-color: var(--tertiary-bg-color);
   border-radius: 50%;
 }
