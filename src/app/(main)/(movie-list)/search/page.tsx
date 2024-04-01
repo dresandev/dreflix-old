@@ -44,6 +44,7 @@ export default async function SearchPage({
       </h2>
 
       <InfiniteMovieResults
+        key={search_query}
         initMovies={results}
         totalPages={total_pages}
         keyword={search_query}

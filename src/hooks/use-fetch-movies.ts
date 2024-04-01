@@ -21,17 +21,10 @@ export const useFetchMovies = ({
   })
 
   const { observerTargetRef, isInView } = useIsInView<HTMLDivElement>({
-    rootMargin: '0px 0px 700px 0px',
+    rootMargin: '0px 0px 800px 0px',
   })
 
   const { page, isLoading } = moviesData
-
-  useEffect(() => {
-    setMoviesData(prevMoviesData => ({
-      ...prevMoviesData,
-      movies: initMovies,
-    }))
-  }, [initMovies])
 
   useEffect(() => {
     if (!isInView || isLoading || page > totalPages) return
