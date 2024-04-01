@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { useTrailerModalStore } from '~/store/trailer-modal-store'
-import { InPortal } from '~/components/InPortal'
 import { CloseIcon } from '~/components/SVG'
 import styles from './TrailerModal.module.css'
 
 export const TrailerModal = () => {
+  const modalRef = useRef<HTMLDivElement>(null)
   const prevScrollY = useRef(0)
   const trailerKey = useTrailerModalStore(state => state.trailerKey)
   const toggleShowTrailerModal = useTrailerModalStore(state => state.toggleShowTrailerModal)
@@ -16,7 +16,7 @@ export const TrailerModal = () => {
       if (document.fullscreenElement) return
 
       window.scrollTo({ top: prevScrollY.current })
-      window.focus()
+      modalRef.current?.focus()
     }
 
     document.addEventListener('fullscreenchange', handleFullscreenChange)
@@ -39,25 +39,31 @@ export const TrailerModal = () => {
     }
   }, [toggleShowTrailerModal])
 
-  return (
-    <InPortal id='modal-container'>
-      <div className={styles.modal}>
-        <button
-          aria-label='Close trailer modal'
-          className={styles.closeModalBtn}
-          onClick={toggleShowTrailerModal}
-        >
-          <CloseIcon />
-        </button>
+  useEffect(() => {
+    modalRef.current?.focus()
+  }, [])
 
-        <iframe
-          className={styles.trailerFrame}
-          src={`https://www.youtube-nocookie.com/embed/${trailerKey}?autoplay=1&si=F2Vt2iqn8TdSBHMP&amp;controls=1`}
-          title='YouTube video player'
-          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowFullScreen
-        ></iframe>
-      </div>
-    </InPortal>
+  return (
+    <div
+      ref={modalRef}
+      className={styles.modal}
+      tabIndex={0}
+    >
+      <button
+        aria-label='Close trailer modal'
+        className={styles.closeModalBtn}
+        onClick={toggleShowTrailerModal}
+      >
+        <CloseIcon />
+      </button>
+
+      <iframe
+        className={styles.trailerFrame}
+        src={`https://www.youtube-nocookie.com/embed/${trailerKey}?autoplay=1&si=F2Vt2iqn8TdSBHMP&amp;controls=1`}
+        title='YouTube video player'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share'
+        allowFullScreen
+      ></iframe>
+    </div>
   )
 }

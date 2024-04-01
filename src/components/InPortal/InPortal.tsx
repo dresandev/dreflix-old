@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { useHasMounted } from '~/hooks'
 
@@ -18,7 +18,7 @@ export const InPortal: React.FC<InPortalProps> = ({
   if (!hasMounted) return null
 
   return createPortal(
-    children as any,
+    children as ReactElement,
     document.querySelector(`#${id}`)!
   )
 }
