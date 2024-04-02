@@ -37,7 +37,7 @@ export default async function SearchPage({
 
   return (
     <div className={styles.container}>
-      <PageGradient gradientColor='hsl(0 100% 31% / .3)' />
+      <PageGradient gradientColor='hsl(0 100% 31% / .15)' />
 
       <h2 className={styles.searchQuery}>
         Results for {`"${search_query}"`}.
