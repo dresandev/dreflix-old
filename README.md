@@ -17,7 +17,7 @@ Personally I use the .env.local file to work locally with the environment variab
 
 here you can get the values ​​for the environment variables: https://developer.themoviedb.org/reference/intro/authentication
 
-## Getting Started
+## Run development server
 
 After setting environment variables, you can start the development server by running the following commands
 
