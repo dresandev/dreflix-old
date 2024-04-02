@@ -4,7 +4,7 @@ Website dedicated to exploring the world of cinema, where you will discover info
 
 ## Preview
 
-![ezgif com-animated-gif-maker](https://github.com/dresandev/dreflix/assets/79766563/06c74f3b-8034-4699-859c-83cd8deaa463)
+![dreflix preview](https://github.com/dresandev/dreflix/assets/79766563/06c74f3b-8034-4699-859c-83cd8deaa463)
 
 ## Environment Variables
 
