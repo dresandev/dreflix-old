@@ -8,6 +8,7 @@
   transform: translateY(-10px);
   transition: var(--menu-transition);
   overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .menuOpen {
@@ -25,7 +26,6 @@
     visibility: initial;
     transform: unset;
     transition: unset;
-    overflow-y: unset;
     display: flex;
   }
 }

@@ -3,7 +3,7 @@
 import {
   API_BASE_URL,
   API_LANGUAGE,
-  COMMON_FETCH_HEADERS,
+  API_HEADERS,
 } from '~/constants'
 import { createAPIMethod } from '~/utils/create-api-method'
 import {
@@ -37,7 +37,7 @@ export const getMovieList = async ({
   >({
     url: `${API_BASE_URL}/movie/${movieListType}`,
     init: {
-      ...COMMON_FETCH_HEADERS,
+      ...API_HEADERS,
       next: { revalidate: 60 * 60 * 24 }
     }
   })
@@ -53,7 +53,7 @@ export const getMovieList = async ({
 
   return {
     ...movieListResponse,
-    results: moviesWithTrailerKey
+    results: moviesWithTrailerKey,
   }
 }
 
@@ -67,7 +67,7 @@ export const getMovieDetails = async (
     MovieDetails
   >({
     url: `${API_BASE_URL}/movie/${movieId}`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   return fetchMovieDetails({
@@ -87,7 +87,7 @@ export const getSimilarMovies = async (
     MovieListResponse
   >({
     url: `${API_BASE_URL}/movie/${movieId}/similar`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   const movieListResponse = await fetchSimilarMovies({
@@ -115,7 +115,7 @@ export const getMovieMainCast = async (
     MovieCreditsResponse
   >({
     url: `${API_BASE_URL}/movie/${movieId}/credits`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   const { cast } = await fetchMovieCredits({
@@ -140,7 +140,7 @@ export const getMovieTrailerKey = async (
     MovieVideosResponse
   >({
     url: `${API_BASE_URL}/movie/${movieId}/videos`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   const { results: videos } = await fetchMovieVideos({
@@ -162,7 +162,7 @@ export const getMovieListGenres = async (): Promise<Genre[]> => {
     GenresResponse
   >({
     url: `${API_BASE_URL}/genre/movie/list`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   const { genres } = await fetchMovieListGenres({
@@ -204,7 +204,7 @@ export const getMoviesByGenre = async (
     MovieListResponse
   >({
     url: `${API_BASE_URL}/discover/movie`,
-    init: COMMON_FETCH_HEADERS
+    init: API_HEADERS
   })
 
   const movieListResponse = await fetchMovieByGenre({
@@ -247,7 +247,7 @@ export const getMoviesByTitle = async ({
     MovieListResponse
   >({
     url: `${API_BASE_URL}/search/movie`,
-    init: COMMON_FETCH_HEADERS,
+    init: API_HEADERS,
   })
 
   const movieListResponse = await fetchMoviesByTitle({
@@ -281,7 +281,7 @@ export const getMovieTitles = async (
   >({
     url: `${API_BASE_URL}/search/movie`,
     init: {
-      ...COMMON_FETCH_HEADERS,
+      ...API_HEADERS,
       cache: 'no-store'
     },
   })

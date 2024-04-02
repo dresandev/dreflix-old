@@ -21,7 +21,7 @@ export default function Error({
   return (
     <div className={styles.container}>
       <h1>Something went wrong!</h1>
-      <p className={styles.error}>{error.message}</p>
+      <p className={styles.error}>Error fetching movies</p>
       <div className={styles.actions}>
         <button
           className={clsx(

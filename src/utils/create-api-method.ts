@@ -36,19 +36,19 @@ export const createAPIMethod: CreateAPIMethod = ({
   init,
 }) => {
   return async (input) => {
-    const selectedMethod = method === 'GET' ? get : post
-
     try {
+      const selectedMethod = method === 'GET' ? get : post
+
       const res = await selectedMethod(url, input, init)
 
       if (!res.ok) {
-        return `Failed to fetch data. Status: ${res.status}`
+        return new Error(`Failed to fetch data. Status: ${res.status}`)
       }
 
       return res.json()
     } catch (error: any) {
       console.error('Error fetching data: ', error)
-      return 'Error fetching data'
+      return new Error('Error fetching data')
     }
   }
 }
