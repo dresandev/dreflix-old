@@ -1,6 +1,6 @@
 # Dreflix: Movie explorer
 
-Website dedicated to exploring the world of cinema, where you will discover information about a wide variety of films. Here you can access details such as the synopsis, the trailer, the main cast among other details. Next.JS 14 is used as the main framework, the TMDB API is consumed and a design was created that is a mix of the design of different video streaming platforms such as Amazon Prime and Crunchyroll.
+Website dedicated to exploring the world of cinema, where you will discover information about a wide variety of films. You will be able to access details such as the synopsis, the trailer, the main cast among others. The design is a mix of the design of the Amazon Prime and Crunchyroll video streaming platforms.
 
 ## Preview
 
