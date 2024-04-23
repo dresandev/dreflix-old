@@ -1,6 +1,11 @@
 # Dreflix: Movie explorer
 
 Web application to explore movies, with features such as infinite scroll, a movie search engine focusing on keyboard navigation in the style of the YouTube search engine, a carousel to promote movies with features such as auto play only when it is in the viewport or the tab has the focus, animations when changing and showing a new item, among many other details and functionalities; The design of the App is a combination between the Amazon Prime Video application and Crunchyroll.
+
+## Screenshots
+
+![dreflix](https://github.com/dresandev/dreflix/assets/79766563/10f218a8-f856-461f-975a-3e65093456bf)
+
 ## Preview
 
 ![dreflix preview](https://github.com/dresandev/dreflix/assets/79766563/06c74f3b-8034-4699-859c-83cd8deaa463)
