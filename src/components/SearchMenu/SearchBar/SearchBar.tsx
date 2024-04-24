@@ -2,10 +2,10 @@ import type { ChangeEvent, FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import { useSearchResultsStore } from '~/store/search-results-store'
+import { useAutoFocus } from '~/hooks'
 import { SearchIcon } from '~/components/SVG'
 import { navigateToSearch } from '../SearchMenu.helpers'
 import styles from './SearchBar.module.css'
-import { useAutoFocus } from '~/hooks'
 
 interface SearchBarProps {
   isMenuOpen: boolean
