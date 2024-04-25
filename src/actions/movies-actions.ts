@@ -1,4 +1,4 @@
-c'use server'
+'use server'
 
 import {
   API_BASE_URL,
