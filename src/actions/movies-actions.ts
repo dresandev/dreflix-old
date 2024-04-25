@@ -1,4 +1,4 @@
-'use server'
+c'use server'
 
 import {
   API_BASE_URL,
@@ -38,7 +38,7 @@ export const getMovieList = async ({
     url: `${API_BASE_URL}/movie/${movieListType}`,
     init: {
       ...API_HEADERS,
-      next: { revalidate: 60 * 60 * 24 }
+      next: { revalidate: 60 * 60 * 24 * 7 }
     }
   })
 
